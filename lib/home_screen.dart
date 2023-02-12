@@ -43,6 +43,24 @@ class _HomePageState extends State<HomePage> {
           title: Text("Map View"),
           centerTitle: true,
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () async{
+            GoogleMapController controller = await _controller.future;
+            controller.animateCamera(
+              CameraUpdate.newCameraPosition(
+                CameraPosition(
+                    target: LatLng(18.479, 73.82557),
+                        zoom: 16.0
+                )
+              )
+            );
+            setState(() {
+
+            });
+          },
+          child: Icon(Icons.location_disabled_outlined),
+        ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:  [
