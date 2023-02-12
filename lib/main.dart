@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'convert_latlang_to_address.dart';
 import 'home_screen.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorSchemeSeed: Colors.deepOrange,
       ),
-      home: const HomePage(),
+      home: const ConvertLatLangToAddress(),
     );
   }
 }
